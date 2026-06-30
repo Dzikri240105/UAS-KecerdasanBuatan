@@ -57,9 +57,27 @@ Berikut adalah ringkasan hasil evaluasi ketiga model:
 **Kesimpulan:**
 Meskipun K-Nearest Neighbors (KNN) memiliki akurasi global tertinggi (78.38%), model tersebut gagal mendeteksi mayoritas pasien stroke sesungguhnya (Recall hanya 44%). Sebaliknya, model **Random Forest** muncul sebagai model **terbaik** dengan nilai F1-Score tertinggi (20.80%) dan mampu mengenali **68.00%** dari total pasien berisiko stroke yang sebenarnya (Recall yang sangat krusial dalam dunia medis). Secara keseluruhan, tujuan proyek tercapai dan teknik SMOTE berhasil memaksa algoritma berbasis pohon untuk lebih sensitif mendeteksi kasus stroke.
 
+## 8. Kesimpulan dan Rekomendasi
+
+### Kesimpulan
+Berdasarkan eksperimen dan analisis yang telah dilakukan pada proyek prediksi risiko penyakit stroke ini, dapat ditarik beberapa kesimpulan utama:
+1. **Penanganan Data Tidak Seimbang (Imbalanced Data):** Penerapan teknik *Synthetic Minority Over-sampling Technique* (SMOTE) secara eksklusif pada data latih terbukti berhasil menyamakan representasi kelas minoritas (pasien stroke) dari 199 sampel menjadi 3.888 sampel. Langkah ini sangat krusial karena berhasil memaksa model berbasis pohon untuk mempelajari pola karakteristik klinis pasien stroke tanpa mengalami bias ke arah kelas mayoritas.
+2. **Komparasi Performa Model:** * **Random Forest** merupakan model terbaik dalam proyek ini. Meskipun akurasi globalnya berada di angka **74.66%**, model ini menghasilkan nilai **Recall sebesar 68.00%** dan F1-Score tertinggi (**20.80%**).
+   * **Decision Tree** menunjukkan performa yang sangat kompetitif dan hampir setara dengan Random Forest, dengan akurasi **73.87%** dan nilai **Recall yang sama sebesar 68.00%** (F1-Score 20.30%).
+   * **K-Nearest Neighbors (KNN)** menghasilkan akurasi global tertinggi yaitu **78.38%**, namun gagal secara signifikan dalam mendeteksi kelas minoritas dengan nilai **Recall yang sangat rendah, yaitu hanya 44.00%**.
+3. **Metrik Evaluasi Medis:** Dalam konteks komputasi kesehatan (healthcare), nilai **Recall jauh lebih penting daripada Akurasi**. Model KNN berbahaya jika diterapkan di rumah sakit karena melewatkan 56% pasien yang sebenarnya berisiko stroke (*False Negative* tinggi). Oleh karena itu, **Random Forest dipilih sebagai model optimal** karena mampu mendeteksi 68% pasien stroke secara tepat.
+4. **Fitur Paling Berpengaruh:** Berdasarkan grafik *Feature Importance* dari model Random Forest, tiga faktor utama yang paling menentukan risiko stroke pada pasien adalah **Usia (*Age*)**, **Rata-rata Kadar Glukosa (*Avg Glucose Level*)**, dan **Indeks Massa Tubuh (*BMI*)**.
+
+### Rekomendasi (Future Work)
+Untuk meningkatkan performa model prediksi ini pada penelitian selanjutnya, beberapa langkah pengembangan yang direkomendasikan adalah:
+1. **Optimasi Hiperparameter (Hyperparameter Tuning):** Menggunakan metode *GridSearchCV* atau *RandomizedSearchCV* untuk mencari kombinasi parameter terbaik secara otomatis, terutama pada model Random Forest dan KNN (misalnya mencoba variasi nilai *k* atau fungsi jarak yang berbeda).
+2. **Eksplorasi Algoritma Boosting:** Mencoba algoritma *ensemble* berbasis *boosting* yang lebih modern seperti XGBoost, LightGBM, atau CatBoost, yang sering kali memiliki performa lebih superior dalam menangani data tabular medis yang kompleks.
+3. **Kombinasi Teknik Sampling:** Mencoba pendekatan hibrida (*Hybrid Sampling*) seperti SMOTE-Tomek Links atau SMOTE-ENN untuk membersihkan *noise* atau titik data yang tumpang tindih di batas keputusan (*decision boundary*) setelah dilakukan oversampling.
+4. **Penambahan Fitur Klinis:** Jika memungkinkan, mengintegrasikan fitur rekam medis yang lebih spesifik seperti riwayat tekanan darah harian, kadar kolesterol (LDL/HDL), faktor genetik keluarga, serta durasi atau kualitas tidur pasien.
+
 ---
 
-## 8. Daftar Pustaka
+## 9. Daftar Pustaka
 Aryabima, M. I., Rusdah, Roeswidiah, R., & Pudoli, A. (2025). Deteksi dini penyakit stroke pada data tidak seimbang menggunakan SMOTE dan Random Forest. *Jurnal TICOM: Technology of Information and Communication, 13*(3), 141-146.
 
 Azhar, Y., Firdausy, A. K., & Amelia, P. J. (2022). Perbandingan algoritma klasifikasi data mining untuk prediksi penyakit stroke. *SINTECH JOURNAL, 5*(2), 191-197.
