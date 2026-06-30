@@ -98,8 +98,8 @@ Aryabima, M. I., Rusdah, Roeswidiah, R., & Pudoli, A. (2025). Deteksi dini penya
 
 Azhar, Y., Firdausy, A. K., & Amelia, P. J. (2022). Perbandingan algoritma klasifikasi data mining untuk prediksi penyakit stroke. *SINTECH JOURNAL, 5*(2), 191-197.https://doi.org/10.31598/sintechjournal.v5i2.1222
 
-Fadli, M., & Saputra, R. A. (2023). Klasifikasi dan evaluasi performa model Random Forest untuk prediksi stroke. *JT: Jurnal Teknik, 12*(2), 72-80.https://doi.org/10.31000/jt.v12i2.9099
-
 Karyadiputra, E., Setiawan, A., Ramadhani, B., & Purnomo, I. I. (2025). Aplikasi prediksi resiko penyakit stroke. *Technologia: Jurnal Ilmiah, 16*(2), 141-149.https://dx.doi.org/10.31602/tji.v16i2.18377
 
 Nabila, H. A., & Pamungkas, E. W. (2025). Perbandingan algoritma machine learning: SVM, Random Forest, dan XGBoost untuk prediksi stroke. *RABIT: Jurnal Teknologi dan Sistem Informasi Univrab, 10*(2), 1098-1110.https://doi.org/10.36341/rabit.v10i2.6444
+
+Fadli, M., & Saputra, R. A. (2023). Klasifikasi dan evaluasi performa model Random Forest untuk prediksi stroke. *JT: Jurnal Teknik, 12*(2), 72-80.https://doi.org/10.31000/jt.v12i2.9099
