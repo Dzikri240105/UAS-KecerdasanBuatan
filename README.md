@@ -23,10 +23,26 @@ Seiring berkembangnya teknologi di bidang kesehatan, penerapan Kecerdasan Buatan
 3. Menerapkan teknik SMOTE pada proses pelatihan untuk menangani ketidakseimbangan kelas.
 
 ## 4. Data Understanding
-Dataset yang digunakan berasal dari Kaggle, yaitu **Healthcare Dataset Stroke Data**. Dataset ini mencakup 5.110 observasi pasien dengan 11 kolom atribut prediktor dan 1 variabel target:
-* **Fitur Kategorikal:** `gender`, `ever_married`, `work_type`, `Residence_type`, `smoking_status`.
-* **Fitur Numerikal:** `age`, `hypertension`, `heart_disease`, `avg_glucose_level`, `bmi`.
-* **Target Label:** `stroke` (0 = Tidak Stroke, 1 = Mengalami Stroke).
+Dataset yang digunakan berasal dari Kaggle, yaitu **Healthcare Dataset Stroke Data**. Setelah dilakukan pembersihan (menghapus kolom `id` dan kategori `Other` pada gender), dataset ini memiliki total **5.109 baris data** dengan karakteristik fitur sebagai berikut:
+
+| No | Nama Fitur (Kolom) | Tipe Data | Jenis Fitur | Deskripsi / Nilai Unik |
+|---|---|---|---|---|
+| 1 | `gender` | Object | Kategorik (Biner) | Jenis kelamin pasien (`Male`, `Female`) |
+| 2 | `age` | Float | Numerik (Kontinu) | Usia pasien dalam satuan tahun |
+| 3 | `hypertension` | Int | Kategorik (Biner) | Riwayat hipertensi (`0` = Tidak, `1` = Ya) |
+| 4 | `heart_disease` | Int | Kategorik (Biner) | Riwayat penyakit jantung (`0` = Tidak, `1` = Ya) |
+| 5 | `ever_married` | Object | Kategorik (Biner) | Status pernikahan (`Yes`, `No`) |
+| 6 | `work_type` | Object | Kategorik (Nominal) | Jenis pekerjaan (`Private`, `Self-employed`, `Govt_job`, `children`, `Never_worked`) |
+| 7 | `Residence_type` | Object | Kategorik (Biner) | Tipe tempat tinggal (`Urban`, `Rural`) |
+| 8 | `avg_glucose_level` | Float | Numerik (Kontinu) | Rata-rata kadar glukosa/gula darah pasien |
+| 9 | `bmi` | Float | Numerik (Kontinu) | Indeks Massa Tubuh (*Body Mass Index*) |
+| 10 | `smoking_status` | Object | Kategorik (Nominal) | Status merokok (`formerly smoked`, `never smoked`, `smokes`, `Unknown`) |
+| 11 | **`stroke`** | Int | **Target Label** | Status penyakit stroke (`0` = Tidak Stroke, `1` = Stroke) |
+
+### Informasi Distribusi Kelas Target:
+Berdasarkan analisis deskriptif, ditemukan ketidakseimbangan kelas (*imbalanced data*) yang sangat tinggi pada variabel target (`stroke`):
+* **Kelas 0 (No Stroke):** 4.908 pasien (95.12%)
+* **Kelas 1 (Stroke):** 249 pasien (4.88%)
 
 Berdasarkan *Exploratory Data Analysis (EDA)*, ditemukan bahwa data kelas target sangat tidak seimbang (*imbalanced*). Kelompok pasien tidak stroke mencapai sekitar 95,1%, sedangkan penderita stroke hanya sekitar 4,9%.
 
