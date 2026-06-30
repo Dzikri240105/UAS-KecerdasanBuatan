@@ -94,7 +94,7 @@ Untuk meningkatkan performa model prediksi ini pada penelitian selanjutnya, bebe
 ---
 
 ## 9. Daftar Pustaka
-Aryabima, M. I., Rusdah, Roeswidiah, R., & Pudoli, A. (2025). Deteksi dini penyakit stroke pada data tidak seimbang menggunakan SMOTE dan Random Forest. *Jurnal TICOM: Technology of Information and Communication, 13*(3), 141-146.
+Aryabima, M. I., Rusdah, Roeswidiah, R., & Pudoli, A. (2025). Deteksi dini penyakit stroke pada data tidak seimbang menggunakan SMOTE dan Random Forest. *Jurnal TICOM: Technology of Information and Communication, 13*(3), 141-146.(https://doi.org/10.70309/ticom.v13i3.156)
 
 Azhar, Y., Firdausy, A. K., & Amelia, P. J. (2022). Perbandingan algoritma klasifikasi data mining untuk prediksi penyakit stroke. *SINTECH JOURNAL, 5*(2), 191-197.
 
