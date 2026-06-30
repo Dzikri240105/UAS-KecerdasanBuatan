@@ -46,6 +46,15 @@ Berdasarkan analisis deskriptif, ditemukan ketidakseimbangan kelas (*imbalanced 
 
 Berdasarkan *Exploratory Data Analysis (EDA)*, ditemukan bahwa data kelas target sangat tidak seimbang (*imbalanced*). Kelompok pasien tidak stroke mencapai sekitar 95,1%, sedangkan penderita stroke hanya sekitar 4,9%.
 
+### Visualisasi Exploratory Data Analysis (EDA)
+Untuk memahami hubungan antar fitur numerik dan target, berikut adalah hasil visualisasi Matriks Korelasi (Heatmap) dari dataset ini:
+
+![Matriks Korelasi](korelasi.png)
+
+**Insight dari Matriks Korelasi:**
+* Variabel **`age` (usia)** memiliki korelasi positif yang paling tinggi terhadap target **`stroke`** dibandingkan variabel numerik lainnya. Hal ini sejalan dengan fakta medis bahwa risiko stroke meningkat seiring bertambahnya usia.
+* Usia (`age`) juga memiliki hubungan positif dengan `bmi` dan `avg_glucose_level`.
+
 ## 5. Data Preparation
 Tahapan pemrosesan data (Data Preprocessing) yang dilakukan adalah sebagai berikut:
 1. **Data Cleaning:** Menghapus kolom `id` karena tidak relevan secara prediktif. Menghapus 1 baris kategori gender `Other` karena dianggap sebagai *outlier* kategorik. Serta mengisi 201 nilai yang kosong (*missing values*) pada kolom `bmi` menggunakan nilai median (nilai tengah).
