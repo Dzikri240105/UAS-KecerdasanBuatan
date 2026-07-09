@@ -46,6 +46,10 @@ Berdasarkan analisis deskriptif, ditemukan ketidakseimbangan kelas (*imbalanced 
 
 Berdasarkan *Exploratory Data Analysis (EDA)*, ditemukan bahwa data kelas target sangat tidak seimbang (*imbalanced*). Kelompok pasien tidak stroke mencapai sekitar 95,1%, sedangkan penderita stroke hanya sekitar 4,9%.
 
+<img width="704" height="470" alt="distribusi target" src="https://github.com/user-attachments/assets/ca8be54f-95f9-4e4e-8170-42241ad81e16" />
+
+<img width="1389" height="1590" alt="download (11)" src="https://github.com/user-attachments/assets/48c22d9b-037f-4924-b768-90eb26d19ef3" />
+
 ## 5. Data Preparation
 Tahapan pemrosesan data (Data Preprocessing) yang dilakukan adalah sebagai berikut:
 1. **Data Cleaning:** Menghapus kolom `id` karena tidak relevan secara prediktif. Menghapus 1 baris kategori gender `Other` karena dianggap sebagai *outlier* kategorik. Serta mengisi 201 nilai yang kosong (*missing values*) pada kolom `bmi` menggunakan nilai median (nilai tengah).
@@ -73,6 +77,9 @@ Berikut adalah ringkasan hasil evaluasi ketiga model:
 **Kesimpulan:**
 Meskipun K-Nearest Neighbors (KNN) memiliki akurasi global tertinggi (78.38%), model tersebut gagal mendeteksi mayoritas pasien stroke sesungguhnya (Recall hanya 44%). Sebaliknya, model **Random Forest** muncul sebagai model **terbaik** dengan nilai F1-Score tertinggi (20.80%) dan mampu mengenali **68.00%** dari total pasien berisiko stroke yang sebenarnya (Recall yang sangat krusial dalam dunia medis). Secara keseluruhan, tujuan proyek tercapai dan teknik SMOTE berhasil memaksa algoritma berbasis pohon untuk lebih sensitif mendeteksi kasus stroke.
 
+<img width="1459" height="390" alt="matriks" src="https://github.com/user-attachments/assets/a0124b3d-c80c-4c72-a390-c08ac412108d" />
+
+
 ## 8. Kesimpulan dan Rekomendasi
 
 ### Kesimpulan
@@ -83,6 +90,9 @@ Berdasarkan eksperimen dan analisis yang telah dilakukan pada proyek prediksi ri
    * **K-Nearest Neighbors (KNN)** menghasilkan akurasi global tertinggi yaitu **78.38%**, namun gagal secara signifikan dalam mendeteksi kelas minoritas dengan nilai **Recall yang sangat rendah, yaitu hanya 44.00%**.
 3. **Metrik Evaluasi Medis:** Dalam konteks komputasi kesehatan (healthcare), nilai **Recall jauh lebih penting daripada Akurasi**. Model KNN berbahaya jika diterapkan di rumah sakit karena melewatkan 56% pasien yang sebenarnya berisiko stroke (*False Negative* tinggi). Oleh karena itu, **Random Forest dipilih sebagai model optimal** karena mampu mendeteksi 68% pasien stroke secara tepat.
 4. **Fitur Paling Berpengaruh:** Berdasarkan grafik *Feature Importance* dari model Random Forest, tiga faktor utama yang paling menentukan risiko stroke pada pasien adalah **Usia (*Age*)**, **Rata-rata Kadar Glukosa (*Avg Glucose Level*)**, dan **Indeks Massa Tubuh (*BMI*)**.
+
+<img width="768" height="470" alt="download (13)" src="https://github.com/user-attachments/assets/52babcca-f83e-44ec-a448-50749be4dff3" />
+
 
 ### Rekomendasi (Future Work)
 Untuk meningkatkan performa model prediksi ini pada penelitian selanjutnya, beberapa langkah pengembangan yang direkomendasikan adalah:
